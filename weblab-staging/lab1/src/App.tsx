@@ -6,7 +6,7 @@ function App() {
       <a href="#main-content" className="skip-link">
         Ana icerige atla
       </a>
-      
+
       <header>
         <nav aria-label="Ana navigasyon">
           <ul>
@@ -20,35 +20,53 @@ function App() {
       <main id="main-content">
         <section id="hakkimda">
           <h2>Hakkimda</h2>
-          <figure>
-            <img src="/profil.jpg" alt="Muhammed Tarik Menguc'un vesikalik fotografi" />
-            <figcaption>Muhammed Tarik Menguc</figcaption>
-          </figure>
-          <p>
-            Merhaba, ben Muhammed Tarik Menguc. Web gelistirme, semantik HTML ve
-            erisilebilirlik uzerine calismalar yapiyorum.
-          </p>
-          <ul>
-            <li>HTML5 / Semantik Web</li>
-            <li>CSS3 / Responsive Tasarim</li>
-            <li>JavaScript / React</li>
-          </ul>
+          <div className="about-content">
+            <figure>
+              <img src="/profil.jpg" alt="Muhammed Tarik Menguc'un vesikalik fotografi" />
+              <figcaption>Muhammed Tarik Menguc</figcaption>
+            </figure>
+            <div>
+              <p>
+                Merhaba, ben Muhammed Tarik Menguc. Web gelistirme, semantik HTML ve
+                erisilebilirlik uzerine calismalar yapiyorum.
+              </p>
+              <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Git</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section id="projeler">
           <h2>Projelerim</h2>
-          <article>
-            <h3>E-Ticaret Sitesi</h3>
-            <p>React ve Node.js kullanilarak gelistirilmis tam kapsamli e-ticaret platformu.</p>
-            <p><strong>Teknolojiler:</strong> React, Node.js, Express, MongoDB</p>
-            <img src="/eticaret.jpg" alt="E-ticaret sitesi anasayfa ekran goruntusu" />
-          </article>
-          <article>
-            <h3>Blog Uygulamasi</h3>
-            <p>Kullanicilarin makale yazabildigi ve yorum yapabildigi modern blog uygulamasi.</p>
-            <p><strong>Teknolojiler:</strong> Next.js, Tailwind CSS, PostgreSQL</p>
-            <img src="/blog.jpg" alt="Blog uygulamasi makale okuma sayfasi ekran goruntusu" />
-          </article>
+          <div className="project-grid">
+            <article className="project-card">
+              <img src="/eticaret.jpg" alt="E-ticaret sitesi anasayfa ekran goruntusu" />
+              <h3>E-Ticaret Sitesi</h3>
+              <p>React ve Node.js kullanilarak gelistirilmis tam kapsamli e-ticaret platformu.</p>
+              <ul className="skill-tags">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
+            </article>
+            <article className="project-card">
+              <img src="/blog.jpg" alt="Blog uygulamasi makale okuma sayfasi ekran goruntusu" />
+              <h3>Blog Uygulamasi</h3>
+              <p>Kullanicilarin makale yazabildigi ve yorum yapabildigi modern blog uygulamasi.</p>
+              <ul className="skill-tags">
+                <li>Next.js</li>
+                <li>Tailwind CSS</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </article>
+          </div>
         </section>
 
         <section id="iletisim">
